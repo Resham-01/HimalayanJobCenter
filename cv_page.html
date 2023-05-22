@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My CV Form</title>
+  <link rel="stylesheet" href="cv_page.css">
+</head>
+<body>
+    <div id="form_div">
+
+        <form method="POST" action="action.php">
+            <h1>Curriculum Vitae</h1>
+            <h2>Personal Information</h2>
+            <section class="info">
+                
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="languages">Languages:</label>
+                    <input type="text" id="languages" name="languages" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" aria-label="Upload your photo">
+                </div>
+                <div class="form-group">
+                    <label id="photo-preview">Photo Preview:</label>
+                    <img id="photopreview" src="#" alt="Preview your photo">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="hobbies">Hobbies:</label>
+                    <input type="text" id="hobbies" name="hobbies" required>
+                </div> -->
+                
+            </section>
+
+            <script>
+                const photoInput = document.getElementById('photo');
+                const photoPreview = document.getElementById('photo-preview');
+            
+                photoInput.addEventListener('change', () => {
+                  const file = photoInput.files[0];
+                  const reader = new FileReader();
+                
+                  reader.addEventListener('load', () => {
+                    photoPreview.src = reader.result;
+                  });
+              
+                  reader.readAsDataURL(file);
+                });
+            </script>
+            <h2>Education</h2>
+            <section class="row">
+                
+                <div class="form-group">
+                  <label for="degree-1">Degree 1:</label>
+                  <input type="text" id="degree-1" name="degree-1" required>
+                </div>
+                <div class="form-group">
+                  <label for="institution-1">Institution:</label>
+                  <input type="text" id="institution-1" name="institution-1" required>
+                </div>
+                <div class="form-group">
+                  <label for="graduation-date-1">Date of Graduation:</label>
+                  <input type="date" id="graduation-date-1" name="graduation-date-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpa1">GPA:</label>
+                    <input type="text" id="gpa1" name="gpa1" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="degree-2">Degree 2:</label>
+                  <input type="text" id="degree-2" name="degree-2" required>
+                </div>
+                <div class="form-group">
+                  <label for="institution-2">Institution:</label>
+                  <input type="text" id="institution-2" name="institution-2" required>
+                </div>
+                <div class="form-group">
+                  <label for="graduation-date-2">Date of Graduation:</label>
+                  <input type="date" id="graduation-date-2" name="graduation-date-2" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpa2">GPA:</label>
+                    <input type="text" id="gpa2" name="gpa2">
+                </div>
+                
+                <div class="form-group">
+                  <label for="degree-3">Degree 3:</label>
+                  <input type="text" id="degree-3" name="degree-3" required>
+                </div>
+                <div class="form-group">
+                  <label for="institution-3">Institution:</label>
+                  <input type="text" id="institution-3" name="institution-3" required>
+                </div>
+                <div class="form-group">
+                  <label for="graduation-date-3">Date of Graduation:</label>
+                  <input type="date" id="graduation-date-3" name="graduation-date-3" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpa3">GPA:</label>
+                    <input type="text" id="gpa3" name="gpa3">
+                </div>
+            </section>
+            
+            <h2>Work Experience</h2>
+            <section class="row">
+                <div class="form-group">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="employer">Employer:</label>
+                    <input type="text" id="employer" name="employer" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="job-description">Job Description:</label>
+                    <textarea id="job-description" name="job-description" rows="5" required></textarea>
+                </div> -->
+
+                <div class="form-group">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="jobtitle" name="job-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="employer">Employer:</label>
+                    <input type="text" id="employers" name="employer" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="startdate" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="enddate" name="end-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="job-description">Job Description:</label>
+                    <textarea id="job-description" name="job-description" rows="5" required></textarea>
+                </div>
+            </section>
+        
+            <section>
+                <h2>Skills</h2>
+                <div class="form-group">
+                    <label for="skill-1">Skill 1:</label>
+                    <input type="text" id="skill-1" name="skill-1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-2">Skill 2:</label>
+                    <input type="text" id="skill-2" name="skill-2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-3">Skill 3:</label>
+                    <input type="text" id="skill-3" name="skill-3" required>
+                </div>
+            </section>
+            
+
+            <h2>Awards and Achievements</h2>
+            <section class="row_1">
+                <div class="form-group">
+                    <label for="award-title">Award or Achievement:</label>
+                    <input type="text" id="award-title" name="award-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="award-issuer">Issuer:</label>
+                    <input type="text" id="award-issuer" name="award-issuer" required>
+                </div>
+                <div class="form-group">
+                    <label for="award-date">Date Received:</label>
+                    <input type="date" id="award-date" name="award-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="award-title">Award or Achievement:</label>
+                    <input type="text" id="awardtitle" name="award-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="award-issuer">Issuer:</label>
+                    <input type="text" id="awardissuer" name="award-issuer" required>
+                </div>
+                <div class="form-group">
+                    <label for="award-date">Date Received:</label>
+                    <input type="date" id="awarddate" name="award-date" required>
+                </div>
+            </section>
+
+            <section>
+                <div class="column">
+                    <h2>References</h2>
+                    <div class="form-group">
+                        <label for="ref-2-name">Reference Name:</label>
+                        <input type="text" id="ref-2-name" name="ref-2-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ref-2-email">Reference Email:</label>
+                        <input type="email" id="ref-2-email" name="ref-2-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ref-2-phone">Reference Phone Number:</label>
+                        <input type="tel" id="ref-2-phone" name="ref-2-phone" required>
+                    </div>
+                </div>
+            </section>
+            
+            <button type="submit">Submit</button>
+
+            <section>
+                <h2>Download CV</h2>
+                <p>Click the button below to download your completed CV for future use.</p>
+                <p>as a PDF:</p>
+                <button id="download-cv">Download CV</button>
+            </section>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+            <script>
+              // Get the form data
+              const form = document.querySelector('form');
+              const formData = new FormData(form);
+            
+              // Define the download function
+              const downloadCV = () => {
+                // Create a new jsPDF instance
+                const doc = new jsPDF();
+            
+                // Add the form data to the PDF
+                formData.forEach((value, key) => {
+                  doc.text(`${key}: ${value}`, 20, 20);
+                });
+            
+                // Save the PDF
+                doc.save('cv.pdf');
+                }
+            
+              // Add a click event listener to the download button
+              const downloadButton = document.getElementById('download-cv');
+              downloadButton.addEventListener('click', downloadCV);
+            </script>
+
+
+            <section>
+                <h2>CV Report</h2>
+                <div class="form-group">
+                    <label for="cv">CV:</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf" aria-label="Upload your CV">
+                    <small>If you already have your CV, please upload it here.</small>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
